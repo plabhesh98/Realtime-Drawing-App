@@ -9,7 +9,7 @@ function setup(){
     video.size(400,400);
 
     canvas = createCanvas(400, 400);
-    canvas.position(580,100);
+    canvas.position(580,150);
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on("pose", gotPoses);
 }   
@@ -19,7 +19,7 @@ function draw(){
     fill("#FFC0CB");
     stroke("#FFC0CB")
     square(nose_x, nose_y, difference);
-    document.getElementById("status").innerHTML = "Width and height of the square is " + difference + " px ";
+    document.getElementById("btn status").innerHTML = "Width and height of the square is " + difference + " px ";
 }
 
 function modelLoaded(){
